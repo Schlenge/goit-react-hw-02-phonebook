@@ -32,16 +32,18 @@ export default class ContactForm extends Component {
     const { name, value } = e.target;
 
     // Verificare pentru litere în câmpul "Name"
-    if (name === 'name' && !/^[a-zA-Zа-яА-Я]+$/.test(value)) {
+    if (name === 'name' && !/^[a-zA-Zа-яА-Я' -]+$/.test(value)) {
       alert(
-        'Please enter only letters, apostrophe, dash and spaces in the Name field.'
+        'Please enter only letters, apostrophe, dash, and spaces in the Name field.'
       );
       return;
     }
 
     // Verificare pentru cifre în câmpul "Number"
-    if (name === 'number' && !/^\d+$/.test(value)) {
-      alert('Name may contain only letters, apostrophe, dash and spaces.');
+    if (name === 'number' && !/^[0-9 +()-]+$/.test(value)) {
+      alert(
+        'Phone number must be digits and can contain spaces, dashes, parentheses, and can start with +'
+      );
       return;
     }
 

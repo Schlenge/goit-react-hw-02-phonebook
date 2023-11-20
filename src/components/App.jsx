@@ -54,7 +54,7 @@ export default class App extends Component {
 
     return (
       <div className={css.section}>
-        <h2 className={css.title}>React HW 2 - Phonebook</h2>
+        <h2 className={css.title}>Phonebook</h2>
         <ContactForm onAddContact={this.handleAddContact} />
         <h2>Contacts</h2>
         <Filter onFilter={this.handleFilter} filter={this.state.filter} />
